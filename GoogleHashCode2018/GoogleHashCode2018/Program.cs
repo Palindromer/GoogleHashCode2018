@@ -11,7 +11,7 @@ namespace GoogleHashCode2018
             Console.WriteLine("))");
             FileParser parser = new FileParser();
             CityData cityData = parser.ParseFile("e_high_bonus.in");
-            Algorithm alg = new Algorithm();
+            Algorithm alg = new Algorithm("resultE.txt");
             Car[] carsss = alg.PickUpRide(cityData.rides.ToList(), cityData.settings);
             alg.CreateFile(carsss);
             Console.WriteLine("end");
